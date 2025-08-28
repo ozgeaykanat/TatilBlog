@@ -1,0 +1,34 @@
+﻿@using TravelTrip.Models.Sınıflar
+@model List<Blog>
+
+<div class="can-bot" style="display:flex">
+    @foreach (var x in Model)
+    {
+        <div class="left">
+            <div class="bot-left">
+                <img src="@x.BlogImage" alt="" />
+            </div>
+            <div class="left-text">
+                <h4>@x.Baslik</h4>
+                <span class="doller">@x.Tarih.ToString("dd.MM.yy")</span>
+                <p>@x.Aciklama.Substring(0,80)</p>
+                <p><a href="/Blog/BlogDetay/@x.ID"><span class="read">Devamını oku>></span></a></p>
+            </div>
+        </div>
+    }
+</div>
+
+@*@Html.Action("Partial2", "Default");*@
+
+
+@*<div class="right">
+        <div class="bot-left">
+            <img src="~/web/images/pic3.jpg" alt="" />
+        </div>
+        <div class="left-text">
+            <h4>Lorem ipsum dolor sit amet,conte adipiscing elit dolor sit amet</h4>
+            <span class="doller">$950.99</span>
+            <p>Lorem ipsum dolor sit  amet,consectetuer adipiscing elit,sed diam nonummy nibh euismo</p>
+            <p><a href="#"><span class="read">Read more>></span></a></p>
+        </div>
+    </div>*@
